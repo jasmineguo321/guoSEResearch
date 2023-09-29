@@ -52,14 +52,14 @@
           <br> <!-- Line break -->
           <div class="text-center">
             <h1 class="procedure-text">Procedure</h1>
-            <h2 class="procedure-subtext">Using a numbered list, describe your procedure (incude pictures)</h2>
+            <h2 class="procedure-subtext">Description of Research Process Steps</h2>
           </div>
     
           <hr><br> <!-- Horizontal line and line break -->
-    
+  
           <table class="table table-hover text-center table-light table-bordered border-dark-subtle">
             <thead>
-              <tr class="table-primary">
+              <tr class="table-danger">
                 <th><h3>Step</h3></th>
                 <th><h3>Description</h3></th>
                 <th><h3>Image</h3></th>
@@ -67,49 +67,112 @@
             </thead>
             <tbody class="table-group-divider">
               <tr class="align-middle">
-                <th scope="row" class="table-secondary">
+                <th scope="row" class="table-success">
                   <h3>1</h3>
                 </th> <!-- scope="row" specifies header cell is the header for a row -->
                 <td>
-                  <h3>Start Python Flask server</h3>
+                  <h3><strong>Train CNN with Training Dataset Images: </strong> </h3>
+                  <h4> 
+                    Minimizing a loss function by optimizing parameters in the CNN.
+                  </h4>
+                  <h4>
+                    <ul>
+                      <li>The value of the loss function is decreased as the number of the iterations 
+                        increased. </li>
+                      <li>During each iteration, the self-supervised learning goes through the entire training 
+                        data to minimize the loss function.</li>
+                      <li> This allows the CNN to "learn" what a real galaxy merger looks like
+                        and identify when the image does not show a merger.</li>
+                    </ul>
+                  </h4>
                 </td>
-                <td class="text-center"><img src="img/pythonlogo.png" alt="Python Logo"></td>
+                <td class="text-center"><img src="images/figure1.png" width="250px" height="200px" alt="Training Graph"></td>
               </tr>
               <tr class="align-middle">
-                <th scope="row" class="table-secondary">
+                <th scope="row" class="table-success">
                   <h3>2</h3>
                 </th>
                 <td>
-                  <h3>Power circuit on. SR-04/05 transmits data to Nano IOT</h3>
+                  <h3><strong>Randomly Augument Test Dataset Images: </strong></h3>
+                  <h4> 
+                    Augumentation ensures the CNN is trained to 
+                    identify and read 
+                    <br> images that are not completly clear of "distractions." <br>
+                  </h4>
+                  <h4>
+                    These distractions include: 
+                    <ul>
+                      <li>Rotation</li>
+                      <li>Random noise</li>
+                      <li>Inverting</li>
+                    </ul>
+                    Not all images of distant galaxies are of best quality
+                  </h4>
                 </td>
-                <td class="text-center"><img src="img/rangefindertp.png" alt="SRO4 Range Finder"></td>
+                <td class="text-center"><img src="images/figure2.png" width="250px" height="250px" alt="Pigure Augumentation"></td>
               </tr>
               <tr class="align-middle">
-                <th scope="row" class="table-secondary">
+                <th scope="row" class="table-success">
                   <h3>3</h3>
                 </th>
                 <td>
-                  <h3>Nano IoT connects to PC via Wi-Fi and sends data to Arduino program.</h3>
+                  <h3><strong>Enter Test Dataset Images Into CNN Input Layer: </strong></h3>
+                  <h4> 
+                        <ul> 
+                            <li>Apply convolutional layers to input images</li>
+                            <li>Use activation functions to introduce non-linearity</li>                            
+                            <li>Reduce dimensionality with pooling layers</li>
+                            <li>Produce final output with fully connected layers</li>
+                            <li>Adjust weights to minimize output differences</li>
+                        </ul>
+                  </h4> 
+                  <h4>
+                    Input -> Convolution -> ReLU -> Convolution -> <br> 
+                    ReLU -> Pooling -> Fully Connected -> Output
+                  </h4>
                 </td>
-                <td class="text-center"><img src="img/nano33iot3.png" alt="Nano 33 IoT"></td>
+                <td class="text-center"><img src="images/figure3.pbm" width="400px" height="200px" alt="CNN Layers"></td>
               </tr>
               <tr class="align-middle">
-                <th scope="row" class="table-secondary">
+                <th scope="row" class="table-success">
                   <h3>4</h3>
                 </th>
                 <td>
-                  <h3>Arduino and Flask server communicate via HTTP request protocol.</h3>
+                  <h3><strong>Extract Feature Respresentations and Compute Similarity: </strong></h3>
+                  <h4>
+                    CNN outputs low-dimensional space feature vectors that are respresentations of
+                    high-dimensional space images
+                  </h4>
+                  <h4> 
+                    <ul>
+                      <li>We cannot compare and read images, but can do it for feature vectors</li>
+                      <li>This allows us to see how similar a picture is to a known merger</li>
+                    </ul> 
+                    Galaxy images can be identified by calculating the <em>cosine similarity score</em> 
+                    of their feature vector and the vector of a known merger.
+                  </h4>
                 </td>
-                <td class="text-center"><img src="img/arduinologo.png" alt="Arduino Logo"></td>
+                <td class="text-center"><img src="images/figure4.png" width="200px" height="270px" alt="Similarity Comparisons"></td>
               </tr>
               <tr class="align-middle">
-                <th scope="row" class="table-secondary">
+                <th scope="row" class="table-success">
                   <h3>5</h3>
                 </th>
                 <td>
-                  <h3>Flask connects to Firebase and sends data for storage.</h3>
+                  <h3><strong>Conduct Similarity Search: </strong></h3>
+                  <h4> 
+                    A similarity search is conducted with a query image based 
+                    <br>on the similarity scores.
+                  </h4>
+                  <h4>
+                    <ul>
+                      <li>This query image is a known galaxy merger</li>
+                      <li>The more similar a test image is to a known galaxy merger, 
+                        <br>the more likely it is to be a galaxy merger</li>
+                    </ul>
+                  </h4>
                 </td>
-                <td class="text-center"><img src="img/firebaselogo.png" alt="Firebase"></td>
+                <td class="text-center"><img src="images/figure5.png"width="400px" height="200px" alt="Query Image"></td>
               </tr>
             </tbody>
           </table>

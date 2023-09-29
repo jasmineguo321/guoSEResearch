@@ -9,7 +9,7 @@
 }
 
 .authors {
-    background-color: rgb(255, 229, 229);
+    background-color: rgb(243, 253, 232);
 }
 
 .nb-background-color {   /* navbar background color*/
@@ -68,9 +68,13 @@
 }
 
 .procedure-subtext {
-        color: #f9cae9
+    color: #f9cae9
 }
 
+.card-body {
+    background-color: rgb(255, 229, 229);
+}
+  
 /* ----------------- ID -----------------*/
 
 

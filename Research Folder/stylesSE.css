@@ -74,7 +74,14 @@
 .card-body {
     background-color: rgb(255, 229, 229);
 }
-  
+
+.indheader {
+    font-family: "Lucinda Console", monospace;
+}
+
+.tabheader {
+    font-family: "Lucinda Console", monospace;
+}
 /* ----------------- ID -----------------*/
 
 

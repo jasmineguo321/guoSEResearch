@@ -75,7 +75,7 @@
                     <img class="img-fluid" src="images/cnn.png" style="height: 90%" alt="Galaxy Mergers">
                 </div>
                 <div class="col-sm-8 p-3">
-                    <h1 class="ovPadLeft"> Background </h1> <!-- Custom padding left side -->
+                    <h1 class="ovPadLeft indheader"> Background </h1> <!-- Custom padding left side -->
                     <p class="lead overview ovPadLeft"> 
                         With each passing day, telescopes around and above the Earth capture more and more images of 
                         distant galaxies, and the datasets begin to explode in size. 
@@ -96,19 +96,19 @@
                                 representation (z). </li>
                             <li> A CNN learns to make meaningful representations by associating 
                                 augmented views of the same image as similar, allowing it to correctly 
-                                identify. </li>
+                                identify image inputs. </li>
                         </ul>
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8 p-3">
-                    <h1 class="ovPadLeft"> Rationale </h1> <!-- Custom padding left side -->
+                    <h1 class="ovPadLeft indheader"> Rationale </h1> <!-- Custom padding left side -->
                     <p class="lead overview ovPadLeft"> 
                         Galaxy mergers play an important role in the formation
                         and evolution of galaxies. They can trigger the formation of new stars, and
                         studying galaxy mergers is important to understand the evolution of the universe as
-                        a whole. With billions of galaxy images captured by telescopes, identifying galaxy
+                        a whole. <br>With billions of galaxy images captured by telescopes, identifying galaxy
                         mergers becomes the first challenging task to facilitate the future research on galaxy
                         mergers. <br> 
                         <ul> 
@@ -127,15 +127,22 @@
             <div class="row">
                 <div class="col-sm-4 p-3">
                     <!-- pt-3 = padding top-->
-                    <img class="img-fluid" src="img/19418.jpeg" alt="Phytoplankton">
+                    <img class="img-fluid" src="images/data.png" width="350px" height="300px" alt="Data of Mergers">
                 </div>
                 <div class="col-sm-8 p-3">
-                    <h1 class="ovPadLeft"> Research Practicum </h1> <!-- Custom padding left side -->
+                    <h1 class="ovPadLeft indheader"> Research Practicum </h1> <!-- Custom padding left side -->
                     <p class="lead overview ovPadLeft"> 
                         <strong> Hypothesis: </strong> In order to discover the characteristics of galaxy 
                         mergers, a self-supervised deep learning method is proposed to train a model with
                         existing images of galaxy mergers, and the learned model can be further utilized to extract 
-                        feature representations from any galaxy image. <br>                         
+                        feature representations from any galaxy image.                                           
+                    </p>
+                    <p class="lead overview ovPadLeft">
+                        <strong>Independent Variable: </strong>  If the galaxy images were compared in high-dimensional
+                        space without a CNN or in low-dimensional space after running through the trained CNN.
+                    </p>
+                    <p class="lead overview ovPadLeft">
+                        <strong>Dependent Variable: </strong> Precision and Recall of correctly identified galaxy mergers.
                     </p>
                 </div>
             </div>
@@ -152,9 +159,5 @@
         </div>
     </footer>
 <!-- Code injected by live-server -->
-<script>
-	
-	// ]]>
-</script>
 </body>
 </html>

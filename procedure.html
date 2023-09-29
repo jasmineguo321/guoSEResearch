@@ -52,7 +52,7 @@
           <br> <!-- Line break -->
           <div class="text-center">
             <h1 class="procedure-text tabheader">Procedure</h1>
-            <h2 class="procedure-subtext">Description of Research Process Steps</h2>
+            <h2 class="procedure-subtext tabsubheader">Description of Research Process Steps</h2>
           </div>
     
           <hr><br> <!-- Horizontal line and line break -->
@@ -72,21 +72,21 @@
                 </th> <!-- scope="row" specifies header cell is the header for a row -->
                 <td>
                   <h3><strong>Train CNN with Training Dataset Images: </strong> </h3>
-                  <h4> 
+                  <h5 class="text-start"> 
                     Minimizing a loss function by optimizing parameters in the CNN.
-                  </h4>
-                  <h4>
+                  </h5>
+                  <h5 class="text-start">
                     <ul>
-                      <li>The value of the loss function is decreased as the number of the iterations 
+                      <li>The value of the loss function is decreased as the iterations 
                         increased. </li>
-                      <li>During each iteration, the self-supervised learning goes through the entire training 
-                        data to minimize the loss function.</li>
+                      <li>During each iteration, the self-supervised learning goes through the entire <br>training 
+                        data.</li>
                       <li> This allows the CNN to "learn" what a real galaxy merger looks like
                         and identify when the image does not show a merger.</li>
                     </ul>
-                  </h4>
+                  </h5>
                 </td>
-                <td class="text-center"><img src="images/figure1.png" width="300px" height="250px" alt="Training Graph"></td>
+                <td class="text-center"><img src="images/figure1.png" width="250px" height="200px" alt="Training Graph"></td>
               </tr>
               <tr class="align-middle">
                 <th scope="row" class="table-success">
@@ -94,20 +94,23 @@
                 </th>
                 <td>
                   <h3><strong>Randomly Augument Test Dataset Images: </strong></h3>
-                  <h4> 
+                  <h5 class="text-start"> 
                     Augumentation ensures the CNN is trained to 
-                    identify and read 
-                    <br> images that are not completly clear of "distractions." <br>
-                  </h4>
-                  <h4>
+                    identify and read images that are <br>not completly clear of "distractions." <br>
+                  </h5>
+                  <h5 class="text-start">
                     These distractions include: 
-                    <ul>
-                      <li>Rotation</li>
-                      <li>Random noise</li>
-                      <li>Inverting</li>
-                    </ul>
+                  </h5>
+                    <h5 class="text-start">
+                      <ul>
+                        <li>Rotation</li>
+                        <li>Random noise</li>
+                        <li>Inverting</li>
+                      </ul>
+                    </h5>
+                  <h5 class="text-start">
                     Not all images of distant galaxies are of best quality
-                  </h4>
+                  </h5>
                 </td>
                 <td class="text-center"><img src="images/figure2.png" width="250px" height="250px" alt="Pigure Augumentation"></td>
               </tr>
@@ -117,7 +120,7 @@
                 </th>
                 <td>
                   <h3><strong>Enter Test Dataset Images Into CNN Input Layer: </strong></h3>
-                  <h4> 
+                  <h5 class="text-start"> 
                         <ul> 
                             <li>Apply convolutional layers to input images</li>
                             <li>Use activation functions to introduce non-linearity</li>                            
@@ -125,11 +128,11 @@
                             <li>Produce final output with fully connected layers</li>
                             <li>Adjust weights to minimize output differences</li>
                         </ul>
-                  </h4> 
-                  <h4>
-                    Input -> Convolution -> ReLU -> Convolution -> <br> 
-                    ReLU -> Pooling -> Fully Connected -> Output
-                  </h4>
+                  </h5> 
+                  <h5 class="text-start">
+                    Input -> Convolution -> ReLU -> Convolution -> 
+                    ReLU -> Pooling -> <br> Fully Connected -> Output
+                  </h5>
                 </td>
                 <td class="text-center"><img src="images/figure3.pbm" width="400px" height="200px" alt="CNN Layers"></td>
               </tr>
@@ -139,18 +142,18 @@
                 </th>
                 <td>
                   <h3><strong>Extract Feature Respresentations and Compute Similarity: </strong></h3>
-                  <h4>
+                  <h5 class="text-start">
                     CNN outputs low-dimensional space feature vectors that are respresentations of
                     high-dimensional space images
-                  </h4>
-                  <h4> 
+                  </h5>
+                  <h5 class="text-start"> 
                     <ul>
-                      <li>We cannot compare and read images, but can do it for feature vectors</li>
+                      <li>It's hard to compare and read images, but we can do it for feature vectors</li>
                       <li>This allows us to see how similar a picture is to a known merger</li>
                     </ul> 
                     Galaxy images can be identified by calculating the <em>cosine similarity score</em> 
                     of their feature vector and the vector of a known merger.
-                  </h4>
+                  </h5>
                 </td>
                 <td class="text-center"><img src="images/figure4.png" width="200px" height="270px" alt="Similarity Comparisons"></td>
               </tr>
@@ -160,17 +163,17 @@
                 </th>
                 <td>
                   <h3><strong>Conduct Similarity Search: </strong></h3>
-                  <h4> 
+                  <h5 class="text-start"> 
                     A similarity search is conducted with a query image based 
-                    <br>on the similarity scores.
-                  </h4>
-                  <h4>
+                    on the similarity scores.
+                  </h5>
+                  <h5 class="text-start">
                     <ul>
                       <li>This query image is a known galaxy merger</li>
                       <li>The more similar a test image is to a known galaxy merger, 
-                        <br>the more likely it is to be a galaxy merger</li>
+                        the more likely it is to be a galaxy merger</li>
                     </ul>
-                  </h4>
+                  </h5>
                 </td>
                 <td class="text-center"><img src="images/figure5.png"width="400px" height="200px" alt="Query Image"></td>
               </tr>

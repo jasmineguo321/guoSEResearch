@@ -7,10 +7,10 @@ async function getData(){
     const data = await response.text(); //csv is in text format
     // console.log(data);
 
-    const xIterations = []; //x-axis labels = year values 
-    const yVolunteer = []; //fy-axis global temp values
-    const yUnsupervised = []; //y-axis NJ temps
-    const ySupervised = []; //y-axis SH temps
+    const xIterations = []; //x-axis labels = iteration values 
+    const yVolunteer = []; //fy-axis volunteer values
+    const yUnsupervised = []; //y-axis unsupervised temps
+    const ySupervised = []; //y-axis self supervised temps
 
     // \n is new line
     // split ('\n') will seperate table into array of indv. rows
@@ -21,8 +21,8 @@ async function getData(){
 
     table.forEach(row => {
         const columns = row.split(','); //split each row on the commas
-        const year = columns[0]; //assign year value to variable year
-        xIterations.push(year); //push year values in xYear array
+        const year = columns[0]; //assign iteration value to variable year
+        xIterations.push(year); 
         
         const temp = parseFloat(columns[1]); //assign temp values
         yVolunteer.push(temp);
